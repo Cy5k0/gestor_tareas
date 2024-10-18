@@ -1,5 +1,46 @@
 # GESTOR DE TAREAS
 
+```
+gestor_tareas/
+├── gestor_tareas/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── tareas/
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   └── ...
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── usuarios/
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   └── ...
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── templates/
+│   ├── base_generic.html
+│   └── registration/
+│       ├── login.html
+│       └── registro.html
+├── manage.py
+└── ... (otros archivos y carpetas)
+```
+
 ## PASO A PASO
 
 ### Paso 1: Crear un entorno virtual y configurar Django
