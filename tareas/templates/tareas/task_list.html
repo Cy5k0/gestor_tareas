@@ -1,0 +1,23 @@
+{% extends 'base_generic.html' %} {% block content %}
+<h2>Mis Tareas</h2>
+<a href="{% url 'task-create' %}" class="btn btn-primary mb-3">Nueva Tarea</a>
+<ul class="list-group">
+  {% for task in tasks %}
+  <li class="list-group-item">
+    <h5>{{ task.title }}</h5>
+    <p>{{ task.description }}</p>
+    <small>Categoría: {{ task.category }}</small>
+    <div class="mt-2">
+      <a href="{% url 'task-update' task.pk %}" class="btn btn-sm btn-warning"
+        >Editar</a
+      >
+      <a href="{% url 'task-delete' task.pk %}" class="btn btn-sm btn-danger"
+        >Eliminar</a
+      >
+    </div>
+  </li>
+  {% empty %}
+  <li class="list-group-item">No tienes tareas.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

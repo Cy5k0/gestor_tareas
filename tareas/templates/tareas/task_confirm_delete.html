@@ -1,0 +1,8 @@
+{% extends 'base_generic.html' %} {% block content %}
+<h2>¿Estás seguro de que deseas eliminar esta tarea?</h2>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Eliminar</button>
+  <a href="{% url 'task-list' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
